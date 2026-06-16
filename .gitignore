@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build artifacts
+/ivi-installer/build/
+/ivi-installer/dist/
+/ivi-installer/logs/
+*.dmg
+*.msi
+*.app/
+
+# Optional drop-in binaries (NOT shipped — see ivi-installer/ivi_installer/resources/README.md)
+ivi-installer/ivi_installer/resources/celia-keyboard-*.apk
+ivi-installer/ivi_installer/resources/yandex-keyboard-*.apk
+ivi-installer/ivi_installer/resources/platform-tools/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Local DoIP credentials (supply your own; never commit)
+*.tester.pem
+*.tester.key

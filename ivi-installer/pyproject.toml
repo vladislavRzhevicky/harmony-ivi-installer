@@ -1,0 +1,194 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ivi-installer"
+version = "0.25.0"
+description = "Install APK on dealer-unlocked Avatr/Deepal IVI"
+requires-python = ">=3.11"
+dependencies = [
+    # `PySide6-Essentials` instead of `PySide6` cuts the bundle from
+    # ~1.3 GB to ~250 MB by dropping QtWebEngine (Chromium, ~480 MB),
+    # Qt3D, QtCharts, QtDataVisualization, QtQuick3D, QtBluetooth, etc.
+    # We only use QtCore + QtGui + QtWidgets.
+    "PySide6-Essentials>=6.7",
+    "certifi>=2024.2.2",
+    # Windows ships no IANA tzdata, so stdlib `zoneinfo.available_timezones()`
+    # returns an empty set there. The PyPI `tzdata` package is the documented
+    # fallback that `zoneinfo` auto-discovers. macOS/Linux don't need it.
+    "tzdata>=2024.1; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.12",
+    "pytest-qt>=4.4",
+]
+
+[project.scripts]
+ivi-installer = "ivi_installer.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ivi_installer"]
+include = [
+    "ivi_installer/resources/*.jar",
+    "ivi_installer/resources/*.java",
+    "ivi_installer/resources/*.apk",
+    "ivi_installer/resources/*.json",
+    "ivi_installer/resources/platform-tools/windows/*",
+    "ivi_installer/resources/platform-tools/darwin/*",
+]
+
+[tool.hatch.build.targets.wheel.force-include]
+"ivi_installer/resources/hw-perm-grant.jar" = "ivi_installer/resources/hw-perm-grant.jar"
+"ivi_installer/resources/HwPermGrant.java" = "ivi_installer/resources/HwPermGrant.java"
+"ivi_installer/resources/avatr-hdb-broker.jar" = "ivi_installer/resources/avatr-hdb-broker.jar"
+"ivi_installer/resources/extras.json" = "ivi_installer/resources/extras.json"
+# NOTE (public build): the bundled keyboard APK and the platform-tools
+# adb binaries are NOT shipped in this repo (copyright / size). They are
+# optional drop-ins — see ivi_installer/resources/README.md. When present
+# they are picked up by the wheel `include` globs above; re-add explicit
+# force-include lines here if you need them inside a briefcase bundle.
+# At runtime `adb.ensure_adb()` downloads platform-tools on first launch.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+
+# ---- briefcase ----
+# Used to build the macOS .app / .dmg bundle:
+#   pip install briefcase
+#   briefcase create  macOS
+#   briefcase build   macOS
+#   briefcase package macOS --adhoc-sign        # personal use
+#   # → dist/IVI Installer-0.1.0.dmg
+# For distribution to other users you need a Developer ID + notarization.
+[tool.briefcase]
+project_name = "IVI Installer"
+bundle = "dev.deepal2"
+version = "0.25.0"
+url = "https://github.com/vladislavRzhevicky/harmony-ivi-installer"
+license.text = "Research and authorized use only — no warranty. See ../DISCLAIMER.md"
+author = "cars-research contributors"
+author_email = "noreply@example.com"
+
+[tool.briefcase.app.ivi_installer]
+formal_name = "IVI Installer"
+# `icon` points at a base path; briefcase appends `.png` for the source
+# bitmap and generates the per-platform formats (.icns on macOS, .ico on
+# Windows). Source is 1254×1254 RGB — square, above the 1024 minimum.
+icon = "icon"
+description = "Install APK / XAPK on dealer-unlocked Avatr / Deepal IVI"
+long_description = """\
+A small macOS GUI that pushes APK and XAPK files to the head unit of an
+Avatr or Deepal vehicle. The vehicle must already be in dealer-unlocked
+state (USB hub in Slave / adbd running as root) — this app does not
+perform any UDS or DoIP work itself.
+"""
+sources = ["ivi_installer"]
+requires = []   # platform-specific extras live in the macOS section below
+
+[tool.briefcase.app.ivi_installer.macOS]
+# arm64-only build (Apple Silicon). Halves the bundle vs universal2 —
+# x86_64 Macs can run via Rosetta or build from source themselves.
+universal_build = false
+requires = [
+    "PySide6-Essentials>=6.7",
+    "certifi>=2024.2.2",
+]
+# Note: trimming unused Qt modules is done by `scripts/trim_qt.sh`
+# between `briefcase build macOS` and `briefcase package macOS`.
+# `cleanup_paths` was tried and is silently ignored by briefcase 0.3.x
+# for the macOS-app target.
+_disabled_cleanup_paths = [
+    "app_packages/PySide6/Qt/qml",
+    "app_packages/PySide6/Qt/translations",
+    "app_packages/PySide6/Qt/metatypes",
+    "app_packages/PySide6/Qt/libexec",
+    "app_packages/PySide6/Qt/lib/QtQml.framework",
+    "app_packages/PySide6/Qt/lib/QtQuick.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2Basic.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2BasicStyleImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2Fusion.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2FusionStyleImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2Imagine.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2IOSStyleImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2Impl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2MacOSStyleImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2Material.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2MaterialStyleImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2Universal.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickControls2UniversalStyleImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickDialogs2.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickDialogs2QuickImpl.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickDialogs2Utils.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickEffects.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickLayouts.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickParticles.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickShapes.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickTemplates2.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickTest.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickTimeline.framework",
+    "app_packages/PySide6/Qt/lib/QtQuickWidgets.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlCompiler.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlCore.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlLocalStorage.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlMeta.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlModels.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlNetwork.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlWorkerScript.framework",
+    "app_packages/PySide6/Qt/lib/QtQmlXmlListModel.framework",
+    "app_packages/PySide6/Qt/lib/QtLabsAnimation.framework",
+    "app_packages/PySide6/Qt/lib/QtLabsFolderListModel.framework",
+    "app_packages/PySide6/Qt/lib/QtLabsQmlModels.framework",
+    "app_packages/PySide6/Qt/lib/QtLabsSettings.framework",
+    "app_packages/PySide6/Qt/lib/QtLabsSharedImage.framework",
+    "app_packages/PySide6/Qt/lib/QtLabsWavefrontMesh.framework",
+    "app_packages/PySide6/Qt/lib/QtDesigner.framework",
+    "app_packages/PySide6/Qt/lib/QtDesignerComponents.framework",
+    "app_packages/PySide6/Qt/lib/QtHelp.framework",
+    "app_packages/PySide6/Qt/lib/QtUiTools.framework",
+    "app_packages/PySide6/Qt/lib/QtTest.framework",
+    "app_packages/PySide6/Qt/lib/QtConcurrent.framework",
+    "app_packages/PySide6/Qt/lib/QtOpenGL.framework",
+    "app_packages/PySide6/Qt/lib/QtOpenGLWidgets.framework",
+    "app_packages/PySide6/Qt/lib/QtSql.framework",
+    "app_packages/PySide6/Qt/lib/QtXml.framework",
+    "app_packages/PySide6/Qt/lib/QtSvg.framework",
+    "app_packages/PySide6/Qt/lib/QtSvgWidgets.framework",
+    "app_packages/PySide6/Qt/lib/QtPrintSupport.framework",
+    "app_packages/PySide6/Qt/lib/QtNetwork.framework",
+    "app_packages/PySide6/Qt/lib/QtPdf.framework",
+    "app_packages/PySide6/Qt/lib/QtShaderTools.framework",
+    "app_packages/PySide6/Qt/plugins/qmltooling",
+    "app_packages/PySide6/Qt/plugins/imageformats",
+    "app_packages/PySide6/Qt/plugins/sqldrivers",
+    "app_packages/PySide6/Qt/plugins/printsupport",
+    "app_packages/PySide6/Qt/plugins/networkinformation",
+    "app_packages/PySide6/Qt/plugins/tls",
+    "app_packages/PySide6/Qt/plugins/multimedia",
+    "app_packages/PySide6/Qt/plugins/position",
+    "app_packages/PySide6/Qt/plugins/iconengines",
+    "app_packages/PySide6/Qt/plugins/generic",
+]
+# Apple Silicon as the primary target; universal_build above also pulls
+# x86_64 wheels so the same .app runs on Intel Macs.
+
+# Both macOS .app and Windows MSI ship platform-tools inside the
+# wheel; see [tool.hatch.build.targets.wheel.force-include] above and
+# ivi_installer/adb.py:_bundled_adb. Linux still downloads on first
+# launch via ensure_adb().
+
+[tool.briefcase.app.ivi_installer.windows]
+requires = [
+    "PySide6-Essentials>=6.7",
+    "certifi>=2024.2.2",
+]
+# Build on Windows only:
+#   pip install briefcase
+#   briefcase create  windows
+#   briefcase build   windows
+#   briefcase package windows --adhoc-sign      # → dist/IVI Installer-0.1.0.msi

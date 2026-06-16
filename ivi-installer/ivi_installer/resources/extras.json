@@ -1,0 +1,769 @@
+{
+  "schema_version": 2,
+  "comment": "Curated catalog of RU/CIS-friendly apps for in-car head units. AppGallery C-ids are resolved live via the AppGallery API and validated by probing the /appdl/<id> redirect for the expected package name. Re-run scripts/build_extras.py to refresh.",
+  "generated_at": "2026-05-08T07:46:21Z",
+  "apps": [
+    {
+      "id": "ru.yandex.metro",
+      "name": "Яндекс Метро — Москва с МЦД",
+      "category": "navigation",
+      "version": "3.7.6",
+      "size_mb": 51.7,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯМ",
+      "description_ru": "Карты метро с маршрутами",
+      "description_en": "Схемы метро разных городов мира и маршруты в объезд перекрытий",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/d09909a006434b43a5e5d08e806d7189.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101206305"
+        }
+      ]
+    },
+    {
+      "id": "ru.yandex.mobile.gasstations",
+      "name": "Яндекс Заправки: АЗС на карте",
+      "category": "cars",
+      "version": "516.2.0",
+      "size_mb": 121.3,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯЗ",
+      "description_ru": "Оплата топлива на АЗС со смартфона",
+      "description_en": "Заправить авто на АЗС, платные дороги, эвакуатор и автомойка в одном приложении",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/ea44ad1b836c484d9446d5806ea51388.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102466385"
+        }
+      ]
+    },
+    {
+      "id": "ru.yandex.taxi",
+      "name": "Яндекс Go — Такси, Еда, Доставка, Маркет, Самокаты, Продукты",
+      "category": "cars",
+      "version": "5.67.3",
+      "size_mb": 110.5,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯG",
+      "description_ru": "Такси, доставка, каршеринг и самокаты",
+      "description_en": "Заказ такси, самокаты, доставка посылок, каршеринг, продукты и еда из ресторанов",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/4a3bd0b7a07f4981ab1ec3e857546d36.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101411413"
+        }
+      ]
+    },
+    {
+      "id": "com.huawei.maps.app",
+      "name": "Petal Maps",
+      "category": "navigation",
+      "version": "4.7.0.316(001)",
+      "size_mb": 82.6,
+      "min_api": null,
+      "tested": false,
+      "initials": "PM",
+      "description_ru": "Карты от Huawei с пробками и POI",
+      "description_en": "Новый способ навигации",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/99777dc89b0042159d831befc76763c4.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102457337"
+        }
+      ]
+    },
+    {
+      "id": "com.here.app.maps",
+      "name": "Карты и навигация в HERE WeGo",
+      "category": "navigation",
+      "version": "4.19.310",
+      "size_mb": 160.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "HW",
+      "description_ru": "Офлайн-карты с пешеходной и авто-навигацией",
+      "description_en": "Путешествуйте с удовольствием",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/1f76459c56454bcca7ab78781246bf99.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102084301"
+        }
+      ]
+    },
+    {
+      "id": "ru.kinopoisk",
+      "name": "Кинопоиск: фильмы и сериалы",
+      "category": "entertainment",
+      "version": "7.83.0",
+      "size_mb": 66.8,
+      "min_api": null,
+      "tested": true,
+      "initials": "КИ",
+      "description_ru": "Стриминговый сервис с фильмами и сериалами",
+      "description_en": "Кино, сериалы и мультфильмы онлайн и без интернета",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/da1aa99c50d94a3792bbd5fc157eccf8.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101036423"
+        }
+      ]
+    },
+    {
+      "id": "ru.start.androidmobile",
+      "name": "START: Онлайн - Кинотеатр",
+      "category": "entertainment",
+      "version": "8.9.2",
+      "size_mb": 56.8,
+      "min_api": null,
+      "tested": false,
+      "initials": "ST",
+      "description_ru": "Онлайн-кинотеатр START — оригинальные сериалы",
+      "description_en": "Фильмы и сериалы собственного производства, мировое кино и мультфильмы в Full HD",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/e458e69f9a8946a38de6663e62490721.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102616759"
+        }
+      ]
+    },
+    {
+      "id": "com.megogo.application",
+      "name": "MEGOGO — ТВ, кино, мультики и аудиокниги",
+      "category": "entertainment",
+      "version": "5.8.7",
+      "size_mb": 13.2,
+      "min_api": null,
+      "tested": false,
+      "initials": "ME",
+      "description_ru": "Онлайн-кинотеатр MEGOGO с ТВ и аудиокнигами",
+      "description_en": "Включайте онлайн ТВ, фильмы, шоу и аудиокниги бесплатно или по подписке",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/cece7e52f13d4b03b48385dc6b398e94.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100562155"
+        }
+      ]
+    },
+    {
+      "id": "com.vk.vkvideo",
+      "name": "VK Видео: кино, шоу и сериалы",
+      "category": "entertainment",
+      "version": "1.131",
+      "size_mb": 158.7,
+      "min_api": null,
+      "tested": false,
+      "initials": "VВ",
+      "description_ru": "VK Видео: кино, шоу, сериалы и блогеры",
+      "description_en": "Эксклюзивный контент: шоу, фильмы, сериалы, мультфильмы и спортивные трансляции.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/33f702b353804962b00b050655ee4f2f.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C108615647"
+        }
+      ]
+    },
+    {
+      "id": "com.plexapp.android",
+      "name": "Plex: Stream Free Movies & TV",
+      "category": "entertainment",
+      "version": "10.28.0.3441",
+      "size_mb": 60.3,
+      "min_api": null,
+      "tested": false,
+      "initials": "PL",
+      "description_ru": "Клиент личного медиасервера Plex",
+      "description_en": "Plex is your home for free movies, shows, and live TV, plus your own media",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/65/6a621007741b44a6bb92cdacb22967bc.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102670299"
+        }
+      ]
+    },
+    {
+      "id": "ru.yandex.music",
+      "name": "Яндекс Музыка и Подкасты – скачивайте и слушайте",
+      "category": "entertainment",
+      "version": "2026.04.5 #145hur",
+      "size_mb": 60.2,
+      "min_api": null,
+      "tested": true,
+      "initials": "ЯМ",
+      "description_ru": "Стриминговый аудио-сервис с подборками и подкастами",
+      "description_en": "Музыкальный плеер: хиты, новинки, подборки. Аудиокниги. Даже без интернета!",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/f5314547124242ffbfbf1ded3206fee8.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100877333"
+        }
+      ]
+    },
+    {
+      "id": "deezer.android.app",
+      "name": "Deezer: музыка и подкасты",
+      "category": "entertainment",
+      "version": "9.0.12.3",
+      "size_mb": 46.4,
+      "min_api": null,
+      "tested": false,
+      "initials": "DE",
+      "description_ru": "Музыкальный стриминг Deezer",
+      "description_en": "Слушайте избранное, используйте режим офлайн и следуйте девизу Live the Music.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/8472c58fb26a448f8036534279fc9a81.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100232477"
+        }
+      ]
+    },
+    {
+      "id": "com.melodis.midomiMusicIdentifier.freemium",
+      "name": "SoundHound – поиск и воспроизведение музыки",
+      "category": "entertainment",
+      "version": "9.4.7.1",
+      "size_mb": 33.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "SO",
+      "description_ru": "Распознавание музыки и плеер",
+      "description_en": "Распознайте музыку за секунды!",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/7addf7ee77944b0695218a1b8477a719.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102009735"
+        }
+      ]
+    },
+    {
+      "id": "fm.castbox.audiobook.radio.podcast",
+      "name": "Castbox – Бесплатные и Популярные подкасты",
+      "category": "entertainment",
+      "version": "8.23.0-210317261hw",
+      "size_mb": 19.8,
+      "min_api": null,
+      "tested": false,
+      "initials": "CA",
+      "description_ru": "Подкастный плеер с библиотекой и поиском",
+      "description_en": "Самая большая подкаст-платформа для прослушивания и хостинга",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/8f8b8c5131ce4b1f9119e7937f4d38e7.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100220859"
+        }
+      ]
+    },
+    {
+      "id": "ru.litres.android",
+      "name": "Литрес: Книги и аудиокниги",
+      "category": "entertainment",
+      "version": "3.152.0(1)-huawei",
+      "size_mb": 152.1,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЛИ",
+      "description_ru": "Аудиокниги и электронные книги от ЛитРес",
+      "description_en": "Электронные книги, аудиокниги и подкасты. Бестселлеры и классика литературы",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/7b90236929f940b69f3870aba27e9cbc.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100513513"
+        }
+      ]
+    },
+    {
+      "id": "ru.mybook",
+      "name": "Библиотека MyBook — книги и аудиокниги",
+      "category": "entertainment",
+      "version": "4.1.0",
+      "size_mb": 68.8,
+      "min_api": null,
+      "tested": false,
+      "initials": "MY",
+      "description_ru": "Электронные и аудиокниги по подписке",
+      "description_en": "450 000 книг и аудиокниг. Попробуй читать и слушать онлайн или без интернета!",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/0684693ea2f74a56a9f1739eb6e3e815.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102057395"
+        }
+      ]
+    },
+    {
+      "id": "org.telegram.messenger",
+      "name": "Telegram",
+      "category": "social",
+      "version": "11.2.3",
+      "size_mb": 67.8,
+      "min_api": 21,
+      "tested": true,
+      "initials": "TE",
+      "description_ru": "Мессенджер, сборка с telegram.org",
+      "description_en": null,
+      "homepage": "https://telegram.org/",
+      "sources": [
+        {
+          "kind": "direct",
+          "url": "https://telegram.org/dl/android/apk",
+          "version": "11.2.3"
+        }
+      ],
+      "notes_ru": "Прямая ссылка с telegram.org — версия меняется при каждом релизе."
+    },
+    {
+      "id": "com.vkontakte.android",
+      "name": "ВКонтакте: музыка, видео, чаты",
+      "category": "social",
+      "version": "8.164",
+      "size_mb": 151.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "ВК",
+      "description_ru": "Соцсеть ВКонтакте: лента, сообщения, музыка",
+      "description_en": "Социальная сеть: мессенджер, поиск друзей. Чаты, музыка, видео. Пообщаемся в VK?",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/4e115258300c45fc9e58e62664043795.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101104117"
+        }
+      ]
+    },
+    {
+      "id": "com.vk.im",
+      "name": "VK Мессенджер: Общение, звонки",
+      "category": "social",
+      "version": "1.300",
+      "size_mb": 139.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "VМ",
+      "description_ru": "Мессенджер VK: чаты и звонки",
+      "description_en": "Видеозвонки и мессенджер, сообщения. Общение, видео чаты в удобном мессенджере",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/bae8b554ffbb41b981c4d1594de402ae.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C106378919"
+        }
+      ]
+    },
+    {
+      "id": "com.vk.calls",
+      "name": "VK Звонки: безлимитное общение",
+      "category": "social",
+      "version": "1.123.2",
+      "size_mb": 151.2,
+      "min_api": null,
+      "tested": false,
+      "initials": "VЗ",
+      "description_ru": "VK Звонки: безлимитное общение",
+      "description_en": "Звонки для общения и бизнеса",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/29a2f3fb4adc405c902ce6d39e0840d7.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C107825879"
+        }
+      ]
+    },
+    {
+      "id": "ru.ok.android",
+      "name": "Одноклассники – социальная сеть",
+      "category": "social",
+      "version": "26.4.9",
+      "size_mb": 289.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "ОД",
+      "description_ru": "Одноклассники: соцсеть",
+      "description_en": "Фильмы и сериалы, интересные видео, музыка офлайн. Знакомства, чат, видеозвонки",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/f51bf919c90d461b8b35f7b2149c92c3.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101143547"
+        }
+      ]
+    },
+    {
+      "id": "com.viber.voip",
+      "name": "Rakuten Viber Messenger",
+      "category": "social",
+      "version": "27.8.1.0",
+      "size_mb": 140.6,
+      "min_api": null,
+      "tested": false,
+      "initials": "VI",
+      "description_ru": "Мессенджер Viber: чаты и звонки",
+      "description_en": "Безопасное общение: видеочаты, звонки, сообщения.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/9b8cf510074a459f9dc853caa6acc44c.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101130285"
+        }
+      ]
+    },
+    {
+      "id": "ru.yandex.weatherplugin",
+      "name": "Яндекс.Погода",
+      "category": "tools",
+      "version": "26.4.30",
+      "size_mb": 44.8,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯП",
+      "description_ru": "Прогноз погоды от Яндекса",
+      "description_en": "Приложение всё расскажет о погоде, а виджет покажет прогноз на домашнем экране.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/9c54232aeaa64bcab432303d144223f7.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101219645"
+        }
+      ]
+    },
+    {
+      "id": "com.gismeteo.client",
+      "name": "Gismeteo lite",
+      "category": "tools",
+      "version": "1.1.6",
+      "size_mb": 12.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "GL",
+      "description_ru": "Прогноз погоды от Гисметео (lite-версия)",
+      "description_en": "Официальное погодное приложение от Гисметео.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/f82a7e0c2d024728848d39b9c6e62ce3.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C102100435"
+        }
+      ]
+    },
+    {
+      "id": "com.yandex.searchapp",
+      "name": "Яндекс — с Алисой AI",
+      "category": "tools",
+      "version": "26.36",
+      "size_mb": 320.7,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯС",
+      "description_ru": "Поисковик и ассистент Алиса от Яндекса",
+      "description_en": "Поиск с Алисой AI, умная камера, бесплатный определитель номера",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/20f98dd03ed74f39bb99fb71c963add3.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C106536121"
+        }
+      ]
+    },
+    {
+      "id": "ru.yandex.searchplugin",
+      "name": "Яндекс Старт",
+      "category": "tools",
+      "version": "25.126",
+      "size_mb": 315.5,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯС",
+      "description_ru": "Браузер и поисковик Яндекс Старт",
+      "description_en": "В Яндекс Старт всё нужное на одном экране и любую страницу можно сделать главной",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/59c9de4351204b88a42f7a4efdfa3949.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100506321"
+        }
+      ]
+    },
+    {
+      "id": "com.yandex.browser",
+      "name": "Яндекс Браузер с Алисой AI",
+      "category": "tools",
+      "version": "26.3.6.75",
+      "size_mb": 289.0,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯБ",
+      "description_ru": "Полнофункциональный Яндекс Браузер",
+      "description_en": "Яндекс Браузер — быстрый и безопасный браузер с Алисой AI и выгодными покупками.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/f96015a867d242f8bb90befcfb68403c.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100526075"
+        }
+      ]
+    },
+    {
+      "id": "ru.farpost.dromfilter",
+      "name": "Дром – цены на машины",
+      "category": "cars",
+      "version": "7.38.0",
+      "size_mb": 87.6,
+      "min_api": null,
+      "tested": false,
+      "initials": "ДР",
+      "description_ru": "Дром: цены на машины, объявления",
+      "description_en": "Более 600 000 актуальных объявлений по всей России + Проверка авто по вин коду",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/fa9a5da1202f4ac8bdaa1f0235e973a2.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101119849"
+        }
+      ]
+    },
+    {
+      "id": "ru.auto.ara",
+      "name": "Авто.ру: купить и продать авто",
+      "category": "cars",
+      "version": "26.15.0",
+      "size_mb": 199.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "АВ",
+      "description_ru": "Авто.ру: купить и продать автомобиль",
+      "description_en": "Покупка и продажа автомобилей. Проверить авто по VIN (вин) коду",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/09b15468140a4c8697dc8ec793732372.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101134405"
+        }
+      ]
+    },
+    {
+      "id": "ru.gibdd_pay.app",
+      "name": "Штрафы ГИБДД официальные: проверка и оплата. ОСАГО онлайн",
+      "category": "cars",
+      "version": "6.5.2",
+      "size_mb": 18.3,
+      "min_api": null,
+      "tested": false,
+      "initials": "ШГ",
+      "description_ru": "Проверка и оплата штрафов ГИБДД",
+      "description_en": "Штрафы ГИБДД с фото. Оплата штрафов онлайн и оплата дорог. Проверка авто по VIN.",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/b09d5ac9339e4ced8c1568c7f3b376af.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101257641"
+        }
+      ]
+    },
+    {
+      "id": "com.voltasit.obdeleven",
+      "name": "OBDeleven Fahrzeugdiagnose",
+      "category": "cars",
+      "version": "0.105.0",
+      "size_mb": 59.2,
+      "min_api": null,
+      "tested": false,
+      "initials": "OB",
+      "description_ru": "Диагностика автомобиля по OBD2",
+      "description_en": "Scannen Sie Ihr Auto & löschen Sie Störungsmeldungen",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10168/9dbd64e6f14442359cb0a66ed5a45756.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101588135"
+        }
+      ]
+    },
+    {
+      "id": "net.osmand.huawei",
+      "name": "OsmAnd Карты",
+      "category": "navigation",
+      "version": "5.2.13",
+      "size_mb": 358.0,
+      "min_api": null,
+      "tested": false,
+      "initials": "OК",
+      "description_ru": "OpenStreetMap-карты с офлайн-навигацией",
+      "description_en": "Навигация для Активного отдыха",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/2ed8f3d2cc3a4e8b92338c7e1632be7c.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101486545"
+        }
+      ]
+    },
+    {
+      "id": "com.sygic.navigation.offline.maps.route.navigator",
+      "name": "Sygic: GPS Navigation, Offline Maps & Directions",
+      "category": "navigation",
+      "version": "18.7.11",
+      "size_mb": 50.2,
+      "min_api": null,
+      "tested": false,
+      "initials": "SG",
+      "description_ru": "Офлайн GPS-навигация Sygic",
+      "description_en": "The World's Most Installed offline Navigation app",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/65/bed94b59a7594de1802e93a653fe37a1.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100103409"
+        }
+      ]
+    },
+    {
+      "id": "com.vialsoft.radarbot_free",
+      "name": "Radarbot: Детектор радаров",
+      "category": "cars",
+      "version": "8.7.0",
+      "size_mb": 222.8,
+      "min_api": null,
+      "tested": false,
+      "initials": "RA",
+      "description_ru": "Детектор камер и радаров на дороге",
+      "description_en": "Ваш GPS-навигатор и эксперт по радарам. Забудьте о штрафах. Наслаждайтесь ездой!",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/461d87c431a4435f909cac211e73681d.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100879467"
+        }
+      ]
+    },
+    {
+      "id": "ru.ozon.app.android",
+      "name": "OZON: товары, одежда, билеты",
+      "category": "tools",
+      "version": "19.16.0",
+      "size_mb": 176.3,
+      "min_api": null,
+      "tested": false,
+      "initials": "OZ",
+      "description_ru": "Маркетплейс OZON: товары, билеты, доставка",
+      "description_en": "Покупайте миллионы товаров со скидками и быстрой доставкой от одного дня!",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/a4fbb43a270a4243879b3a0fe88c9175.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C100847609"
+        }
+      ]
+    },
+    {
+      "id": "com.wildberries.ru",
+      "name": "WILDBERRIES",
+      "category": "tools",
+      "version": "7.6.1000-huawei",
+      "size_mb": 421.0,
+      "min_api": null,
+      "tested": false,
+      "initials": "WI",
+      "description_ru": "Маркетплейс Wildberries",
+      "description_en": "Скидки каждый день",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/119d687a5a27463ba83cf137d876ffc5.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101183325"
+        }
+      ]
+    },
+    {
+      "id": "ru.yandex.disk",
+      "name": "Яндекс.Диск",
+      "category": "tools",
+      "version": "6.64.0",
+      "size_mb": 334.8,
+      "min_api": null,
+      "tested": false,
+      "initials": "ЯД",
+      "description_ru": "Облачное хранилище Яндекс Диск",
+      "description_en": "Безлимитное хранилище для фото и видео с телефона",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/7a33bd173d634a949597c3698d18b9f6.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101226447"
+        }
+      ]
+    },
+    {
+      "id": "ru.mail.cloud",
+      "name": "Облако Mail: Облачное хранилище фото, видео, файлов",
+      "category": "tools",
+      "version": "5.94.0.10068323",
+      "size_mb": 216.9,
+      "min_api": null,
+      "tested": false,
+      "initials": "VC",
+      "description_ru": "Облачное хранилище от Mail.ru / VK",
+      "description_en": "Облачное хранилище файлов. Диск для фото, вторая память. Хранилище фотографий",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/10169/3c0160b075224d45a21626f7e431964a.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101034901"
+        }
+      ]
+    },
+    {
+      "id": "org.videolan.vlc",
+      "name": "VLC for Android",
+      "category": "entertainment",
+      "version": "3.6.5",
+      "size_mb": 45.1,
+      "min_api": null,
+      "tested": false,
+      "initials": "VL",
+      "description_ru": "Универсальный медиаплеер VLC",
+      "description_en": "VLC for Android is the best open source video and music player, fast and easy!",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/65/b109fc8abeca41b0ad159e367ef5b873.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C101924579"
+        }
+      ]
+    },
+    {
+      "id": "com.brouken.player",
+      "name": "Just (Video) Player",
+      "category": "entertainment",
+      "version": "0.183",
+      "size_mb": 16.6,
+      "min_api": null,
+      "tested": false,
+      "initials": "JP",
+      "description_ru": "Минималистичный видеоплеер на ExoPlayer",
+      "description_en": "Open source video player with no Bluetooth lag",
+      "icon_url": "https://appimg-dre.dbankcdn.com/application/icon144/65/06e207074f1a4ad9882a923bba9ff98d.png",
+      "sources": [
+        {
+          "kind": "appgallery",
+          "id": "C104147921"
+        }
+      ]
+    }
+  ]
+}
